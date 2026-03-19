@@ -233,7 +233,7 @@ public class SearchResponse extends ActionResponse implements ChunkedToXContentO
         this.timedOut = timedOut;
         this.terminatedEarly = terminatedEarly;
         this.numReducePhases = numReducePhases;
-        this.scrollId = scrollId;
+        this.scrollId = (totalShards > 0) ? scrollId : null;
         this.pointInTimeId = pointInTimeId;
         this.clusters = clusters;
         this.totalShards = totalShards;
